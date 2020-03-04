@@ -1,0 +1,25 @@
+heroku 깨우기 방법
+https://m.blog.naver.com/PostView.nhn?blogId=kbs4674&logNo=221406115523&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+heroku 사용법
+https://tutorial-extensions.djangogirls.org/ko/heroku/
+
+https://nhj12311.tistory.com/283
+
+django html 템플릿 사용법
+https://docs.djangoproject.com/en/1.11/ref/templates/builtins/#ref-templates-builtins-filters1
+
+local에서는 sqqlite 서버에서는 postgre사용하기
+https://medium.com/@BennettGarner/deploying-django-to-heroku-connecting-heroku-postgres-fcc960d290d1
+
+이미지 등 staticfile 추가방법
+C:\Users\Jang\emocon2\blog\static 내부의 아무데나 파일 저장 후 python manage.py collectstatic 하면 됨
+
+popup 사진 교체하기
+1. C:\Users\Jang\emocon2\blog\static\popup 내의 이미지를 새 이미지로 교체한다
+2. python manage.py collectstatic 한 후 git에 올린다
+
+페이지네이터 구현
+https://ssungkang.tistory.com/entry/Django-11-Pagination-%EC%9D%84-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90
+
+heroku run bash

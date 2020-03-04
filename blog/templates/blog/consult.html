@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>다이렉트 보일러</title>
+
+    <!-- Custom fonts for this theme -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+  <style>
+    .back_a { background-image: url( "{% static 'img/background1.jpg' %}"); background-size: cover;}
+
+    .nav_ro {
+      width: 94%;
+      display: table;
+      margin-left:3%;
+      margin-right:3%;
+      margin-top:2%;
+    }
+    .nav_box { display: table-cell;}
+    .nav_box-a { width: 30%; }
+    .nav_box-b { width: 25%; }
+    .nav_box-c { width: 25%; }
+  </style>
+
+
+
+</head>
+
+<body id="page-top">
+
+<div class="nav_ro">
+  <div class="nav_box nav_box_a" style="padding-left:3%">
+    <a href="{% url 'index' %}">
+      <img align="center" width="120%" height="" alt="nav_title1" src="{% static 'img/nav_title1.png' %}"><br><br>
+    </a>
+  </div>
+  <div class="nav_box nav_box_b" style="padding-left:8%">
+    <img align="center" width="90%" height="" alt="nav_title1" src="{% static 'img/naver_search.png' %}"><br><br>
+  </div>
+
+  <div class="nav_box nav_box_c" >
+    <a href="tel:0553426151">
+      <img align="center" width="95%" height="" alt="nav_title1" src="{% static 'img/nav_title_phone.png' %}"><br><br>
+    </a>
+  </div>
+
+</div>
+
+  <table width="100%" height="40" border="0" cellspacing="0" cellpadding="0" style="background-color:#FFCC33;">
+		<!--<table width="100%" height="35" border="0" cellspacing="0" cellpadding="0" >-->
+          <tr style="font-size=5px">
+            <td align="center"><a style="color:#000000;" href="{% url 'index' %}"><font size="2em" face="나눔고딕">회사소개</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'service' %}"><font size="2em" face="나눔고딕">견적비교</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'product_info' %}"><font size="2em" face="나눔고딕">제품소개</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'consult' %}"><font size="2em" face="나눔고딕">상담신청</font></a></td>
+            <!--<td align="center"><a style="color:#000000" href="{% url 'recent' %}"><font size="2em" face="나눔고딕">설치현황</font></a></td>-->
+            <!--<td align="center"><a style="color:#000000" href="{% url 'customer' %}"><font size="2em" face="나눔고딕">고객지원</font></a></td>-->
+            <!--<td align="center"><a style="color:#000000" href="{% url 'map' %}"><font size="2em" face="나눔고딕">오시는길</font></a></td>-->
+          </tr>
+  </table>
+
+  <!-- Masthead -->
+  <!--masthead header class에 넣기-->
+  <header class=" text-center">
+    <div class="container align-items-center flex-column">
+
+      <!--1. 사용자가 이름, 연락처, 문의내용을 입력하면 db에 저장됨-->
+      <!--2. 바로 아래부분에 게시판 만들어서 이름, 문의내용, 시간, 답변내용 표시-->
+      <!--3. 관리자페이지에 비슷한 게시판 만들어서 +이름, 문의내용, 시간 ,답변내용, 답변작성칸 표시-->
+
+      <!-- Contact Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+
+      <!-- Contact Section Form -->
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h1>상담신청</h1>
+          <p style="font-size:0.9em">지금 바로 상담신청하시면 빠르게 답변해드립니다.</p>
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <form action="{% url 'index' %}" name="contactF" method="post" id="contactF" >
+            {% csrf_token %}
+            <div class="">
+              <div class=" floating-label-form-group mb-0 pb-2">
+                <label>이름</label>
+                <input class="form-control" id="name" name="name" type="text" placeholder="이름" required="required" data-validation-required-message="성함을 입력하세요">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+
+            <div class="">
+              <div class=" floating-label-form-group mb-0 pb-2">
+                <label>전화번호 (-제외)</label>
+                <input class="form-control" id="phone" name="phone" type="tel" placeholder="전화번호(-제외)" required="required" data-validation-required-message="전화번호를 입력하세요(-제외)">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="">
+              <div class=" floating-label-form-group mb-0 pb-2">
+                <label>문의내용</label>
+                <textarea class="form-control" id="content" name="content" rows="5" placeholder="문의내용" required="required" data-validation-required-message="문의내용을 입력하세요"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div >
+              <input type="submit" id = "submit_btn" class="btn" style="background:#606976; color:#ffff"  onclick="return validate()" value="등록하기">
+            </div>
+          </form>
+          <br><br>
+          <table class="table table-striped table-hover" id="table_1">
+            <thead>
+              <tr>
+                <th scope="cols">작성자</th>
+                <th scope="cols">작성내용</th>
+                <th scope="cols">작성일</th>
+                <th scope="cols">답변</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for i in model|dictsortreversed:'id' %}
+              <tr onclick="location.href='{% url 'consult_content' %}?id={{i.id}}'" style="cursor:pointer">
+                <th scope="row">{{ i.name }}</th>
+                <td>{{ i.content.0 }}{{ i.content.1 }}{{ i.content.2 }}{{ i.content.3 }}{{ i.content.4 }}{{ i.content.5 }}{{ i.content.6 }}{{ i.content.7 }}{{ i.content.8 }}...</td>
+                <td>{{ i.time }}</td>
+                {% if i.reply == "" %}
+                <td>대기</td>
+                {% else %}
+                <td>완료</td>
+                {% endif %}
+              </tr>
+              {% endfor %}
+
+            </tbody>
+          </table>
+          {% if model.has_previous %}
+          <a href="?page=1#table_1" style="margin-right:10px">◀◀</a>
+          <a href="?page={{ model.previous_page_number }}#table_1">◀</a>
+          {% endif %}
+          <span style="margin-left:10px">{{ model.number }}</span>
+          <span>/</span>
+          <span style="margin-right:10px">{{ model.paginator.num_pages}}中</span>
+          {% if model.has_next %}
+          <a href="?page={{ model.next_page_number }}#table_1" style="margin-right:10px">▶</a>
+          <a href="?page={{ model.paginator.num_pages }}#table_1">▶▶</a>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+    </div>
+  </header>
+
+
+  <!-- Footer -->
+<hr>
+  <footer  style="padding:0px; padding-bottom:0px; padding:left:0px">
+    <div class="container" id="footer_contact" align="center">
+      <p style="font-size:0.47em; line-height:1px;">주소: 창원시 성산구 신월로 69  / 사업자정보: 390-35-00619 /  전화번호: 055-342-6151 </p>
+      <p style="font-size:0.47em; line-height:1px;">전화번호: 010-5477-6151 /  Fax: 055-603-0999 / 이메일: gostor28@naver.com</p>
+      <p style="font-size:0.47em; line-height:1px;">개인정보 관리책임자: 차남준  / Copyright &copy; 다이렉트 보일러&에어컨  /  대표: 차남준</p>
+      </div>
+  </footer>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+</body>
+
+</html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+
+  function validate() {
+    if( document.contactF.name.value.length > 7 )
+    {
+      document.contactF.name.focus() ;
+      alert( "정확한 이름을 입력해주세요" );
+      return false;
+    }
+    else if( document.contactF.phone.value.length > 12  | (document.contactF.phone.value.length < 8 && document.contactF.phone.value.length >= 1))
+    {
+      document.contactF.phone.focus() ;
+      alert( "정확한 전화번호를 입력해주세요 (-제외)" );
+      return false;
+    }
+    else {
+      if( document.contactF.name.value != "" && document.contactF.phone.value != "" && document.contactF.content.value != "")
+      {
+        alert("상담신청이 완료되었습니다");
+      }
+      return true;
+    }
+  }
+
+
+</script>
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>다이렉트 보일러</title>
+
+    <!-- Custom fonts for this theme -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+  <style>
+    .back_a { background-image: url( "{% static 'img/background1.jpg' %}"); background-size: cover;}
+
+    .nav_ro2 {
+      width: 94%;
+      display: table;
+      margin-left:3%;
+      margin-right:3%;
+      margin-top:2%;
+    }
+    .nav_box2 { display: table-cell;}
+    .nav_box2-a { width: 30%; }
+    .nav_box2-b { width: 25%; }
+    .nav_box2-c { width: 25%; }
+  </style>
+
+
+
+</head>
+
+<body id="page-top">
+
+  <div class="nav_ro2">
+    <div class="nav_box2 nav_box2_a" style="padding-left:3%">
+      <a href="{% url 'index' %}">
+        <img align="center" width="120%" height="" alt="nav_title1" src="{% static 'img/nav_title1.png' %}"><br><br>
+      </a>
+    </div>
+    <div class="nav_box2 nav_box2_b" style="padding-left:8%">
+      <img align="center" width="90%" height="" alt="nav_search" src="{% static 'img/naver_search.png' %}"><br><br>
+    </div>
+
+    <div class="nav_box2 nav_box2_c" >
+      <a href="tel:0553426151">
+        <img align="center" width="95%" height="" alt="nav_title_phone" src="{% static 'img/nav_title_phone.png' %}"><br><br>
+      </a>
+    </div>
+
+  </div>
+
+  <table width="100%" height="40" border="0" cellspacing="0" cellpadding="0" style="background-color:#FFCC33;">
+		<!--<table width="100%" height="35" border="0" cellspacing="0" cellpadding="0" >-->
+          <tr style="font-size=5px">
+            <td align="center"><a style="color:#000000;" href="{% url 'index' %}"><font size="2em" face="나눔고딕">회사소개</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'service' %}"><font size="2em" face="나눔고딕">견적비교</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'product_info' %}"><font size="2em" face="나눔고딕">제품소개</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'consult' %}"><font size="2em" face="나눔고딕">상담신청</font></a></td>
+            <!--<td align="center"><a style="color:#000000" href="{% url 'recent' %}"><font size="2em" face="나눔고딕">설치현황</font></a></td>-->
+            <!--<td align="center"><a style="color:#000000" href="{% url 'customer' %}"><font size="2em" face="나눔고딕">고객지원</font></a></td>-->
+            <!--<td align="center"><a style="color:#000000" href="{% url 'map' %}"><font size="2em" face="나눔고딕">오시는길</font></a></td>-->
+          </tr>
+  </table>
+
+  <!-- Masthead -->
+  <!--masthead header class에 넣기-->
+  <header class=" text-center">
+    <br><br>
+    <img align="center" width="90%" height="" alt="index_content" src="{% static 'img/index_content.png' %}"><br><br>
+    <br><br>
+    <div align="center">
+      <a href="{% url 'service' %}" class="btn btn-xl btn-outline-dark">
+        <font class="page-section-heading text-center text-uppercase font_1" color="#000000"   >지금 바로 최저가 알아보기!</font>
+      </a>
+    </div>
+    <br><br>
+  </header>
+
+
+  <!-- Footer -->
+  <hr>
+  <footer  style="padding:0px; padding-bottom:0px; padding:left:0px">
+    <div class="container" id="footer_contact" align="center">
+      <p style="font-size:0.47em; line-height:1px;">주소: 창원시 성산구 신월로 69  / 사업자정보: 390-35-00619 /  전화번호: 055-342-6151 </p>
+      <p style="font-size:0.47em; line-height:1px;">전화번호: 010-5477-6151 /  Fax: 055-603-0999 / 이메일: gostor28@naver.com</p>
+      <p style="font-size:0.47em; line-height:1px;">개인정보 관리책임자: 차남준  / Copyright &copy; 다이렉트 보일러&에어컨  /  대표: 차남준</p>
+      </div>
+  </footer>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>다이렉트 보일러</title>
+
+    <!-- Custom fonts for this theme -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" trype="text/css">
+
+  <!-- Theme CSS -->
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+
+  <style type="text/css">
+    .select-script{position:relative; width:80%; height:40px; line-height:40px; text-transform:uppercase; background:#fff; margin:0;}
+	.select-script label{position:absolute; width:100%; font-size:.86em; color:#606976; top:0; left:0; right:0;  padding:0 5%;}
+	.select-script select{width:90%; height:40px; opacity:0; filter:alpha(opacity=0); -ms-filter:alpha(opacity=0)/* IE 8 */;}
+
+    table.type09 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    }
+
+    table.type09 thead th {
+        padding: 10px;
+        font-weight: bold;
+        vertical-align: top;
+        color: #369;
+        border-bottom: 3px solid #036;
+    }
+    table.type09 tbody th {
+        width: 22%;
+        padding: 10px;
+        font-weight: bold;
+        vertical-align: top;
+        border-bottom: 1px solid #ccc;
+        background: #f3f6f7;
+    }
+    table.type09 td {
+        width: 20%;
+        padding: 10px;
+        vertical-align: top;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .ro {
+      text-align: center;
+      margin-left:20%;
+      width: 60%;
+      display: table;
+
+    }
+    .box { display: table-cell; text-align: center;}
+    .box-a { width: 40%; }
+    .box-b { width: 0% }
+    .box-c { width: 40%; }
+    .back_a { background-image: url( "{% static 'img/background2.png' %}"); background-size: cover;}
+
+    .nav_ro2 {
+      width: 75%;
+      display: table;
+      margin-left:3%;
+      margin-right:3%;
+      margin-top:2%;
+    }
+    .nav_box2 { display: table-cell;}
+    .nav_box2-a { width: 30%; }
+    .nav_box2-b { width: 25%; }
+    .nav_box2-c { width: 25%; }
+
+    @font-face {
+    font-family: NanumSquareWeb;
+    src: local(NanumSquareR),
+         local(NanumSquare),
+         url(NanumSquareR.eot?#iefix) format('embedded-opentype'),
+         url(NanumSquareR.woff) format('woff'),
+         url(NanumSquareR.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+0-10FFFF;
+    }
+    .font_1 {
+      font-family: NanumSquareWeb, sans-serif;
+    }
+
+    @media ( max-width: 768px ) {
+      body {
+        height: 75vh;
+      }
+
+      .ro {
+      text-align: center;
+      margin-left:0%;
+      width: 100%;
+      display: table;
+      }
+    }
+</style>
+
+
+</head>
+
+
+<body id="page-top" leftmargin="10%" rightmargin="10%">
+  <div align="center">
+  <div class="nav_ro2" align="center">
+    <div class="nav_box2 nav_box2_a" style="padding-left:3%">
+      <a href="{% url 'index' %}">
+        <img align="center" width="120%" height="" alt="nav_title1" src="{% static 'img/nav_title1.png' %}"><br><br>
+      </a>
+    </div>
+    <div class="nav_box2 nav_box2_b" style="padding-left:8%">
+      <img align="center" width="90%" height="" alt="nav_search" src="{% static 'img/naver_search.png' %}"><br><br>
+    </div>
+
+    <div class="nav_box2 nav_box2_c" >
+      <a href="tel:0553426151">
+        <img align="center" width="95%" height="" alt="nav_title_phone" src="{% static 'img/nav_title_phone.png' %}"><br><br>
+      </a>
+    </div>
+  </div>
+
+  </div>
+  <div align="center" style="background-color:#FFCC33;">
+  <table width="85%" height="40" border="0" cellspacing="0" cellpadding="0" style="background-color:#FFCC33;">
+		<!--<table width="100%" height="35" border="0" cellspacing="0" cellpadding="0" >-->
+          <tr style="font-size=5px">
+            <td align="center"><a style="color:#000000;" href="{% url 'index' %}"><font size="2em" face="나눔고딕">회사소개</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'service' %}"><font size="2em" face="나눔고딕">견적비교</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'product_info' %}"><font size="2em" face="나눔고딕">제품소개</font></a></td>
+            <td align="center"><a style="color:#000000" href="{% url 'consult' %}"><font size="2em" face="나눔고딕">상담신청</font></a></td>
+            <!--<td align="center"><a style="color:#000000" href="{% url 'recent' %}"><font size="2em" face="나눔고딕">설치현황</font></a></td>-->
+            <!--<td align="center"><a style="color:#000000" href="{% url 'customer' %}"><font size="2em" face="나눔고딕">고객지원</font></a></td>-->
+            <!--<td align="center"><a style="color:#000000" href="{% url 'map' %}"><font size="2em" face="나눔고딕">오시는길</font></a></td>-->
+          </tr>
+  </table>
+  </div>
+
+  <section class="page-section  mb-0 back_a" id="service" style=" padding:40px" >
+    <div class="container">
+
+      <div align="center">
+          <font class="page-section-heading text-center text-uppercase font_1" color="#000000"   >한번에 비교!</font>
+          </div>
+            <!-- Icon Divider -->
+          <!--<div class="divider-custom divider">-->
+            <!--<div class="divider-custom-line"></div>-->
+            <!--<div class="divider-custom-icon">-->
+              <!--<i class="fas fa-star"></i>-->
+            <!--</div>-->
+            <!--<div class="divider-custom-line"></div>-->
+          <!--</div>-->
+          <br>
+          <div class="row">
+        <div class="col-lg-8 mx-auto" style="" align="center" >
+      <form action="" method="post" id = "myForm"  name = "myForm">
+        {% csrf_token %}
+      <div class="select-box select-script" id="d1" style="border:1px solid #606976; border-radius:4px; width:80%">
+        <label for="sort-select11"  id = s1 >제품종류를 선택하세요</label>
+      <select id="sort-select11" name="product_type">
+        <option value="">제품종류를 선택하세요</option>
+        <option value="boiler">보일러</option>
+        <option value="onsugi">온수기</option>
+        <option value="aircon">에어컨</option>
+      </select>
+      </div>
+      <br><br>
+      <div style="" id="result" >
+        <input type="submit" id = "submit_btn" class="btn" style="background:#606976; color:#ffff"  onclick="return check_type()" value="견적 비교하러가기">
+      </div>
+      </form>
+        </div>
+      </div>
+          <br><br>
+
+
+      <div class="ro" >
+        <div class="box box-a " style="border:0px solid; border-color:#00225b;  margin:0 auto; ">
+
+          <!--<div style="background-color:#0FF;">-->
+            <!--<br><p>보일러 제품안내</p><br>-->
+          <!--</div>-->
+          <img align="center" width="90%" height="" alt="boiler_info3" src="{% static 'img/boiler_info3.png' %}"><br><br>
+
+          <a href="{% url 'daesung_info' %}">
+            <img align="center" width="90%" height="" alt="daesung_logo" src="{% static 'img/daesung_logo2.png' %}"><br><br>
+          </a>
+          <a href="{% url 'navien_info' %}">
+            <img align="center" width="90%" height="" alt="navien_logo" src="{% static 'img/navien_logo2.png' %}"><br><br>
+          </a>
+          <a href="{% url 'kiturami_info' %}">
+            <img align="center" width="90%" height="" alt="kiturami_logo" src="{% static 'img/kiturami_logo2.png' %}"><br><br>
+          </a>
+          <a href="{% url 'rinnai_info' %}">
+            <img align="center" width="90%" height="" alt="rinnai_logo" src="{% static 'img/rinnai_logo2.png' %}"><br><br>
+          </a>
+        </div>
+
+        <div class="box box-c " align="center" style="border-left:0px solid;  border-color:#fff; padding:0px; margin:0 auto; ">
+
+          <img align="center" width="90%" height="" alt="aircon_info" src="{% static 'img/aircon_info.png' %}"><br><br>
+          <a href="{% url 'daesung_info' %}">
+            <img align="center" width="90%" height="" alt="samsung_logo" src="{% static 'img/samsung_logo2.png' %}"><br><br>
+          </a>
+          <a href="{% url 'navien_info' %}">
+            <img align="center" width="90%" height="" alt="lg_logo" src="{% static 'img/lg_logo2.JPG' %}"><br><br>
+          </a>
+          <a href="{% url 'kiturami_info' %}">
+            <img align="center" width="90%" height="" alt="carrier_logo" src="{% static 'img/carrier_logo2.png' %}"><br><br>
+          </a>
+          <a href="{% url 'rinnai_info' %}">
+            <img align="center" width="90%" height="" alt="winia_logo" src="{% static 'img/winia_logo2.png' %}"><br><br>
+          </a>
+          <!--<a href="{% url 'rinnai_info' %}">-->
+            <!--<img align="center" width="100%" height="" alt="else_logo" src="{% static 'img/else_logo.png' %}"><br><br>-->
+          <!--</a>-->
+        </div>
+      </div>
+
+    <!--<div align="center" >-->
+    <!--<button class="btn" type="button" style="background:#ffff; color:#000000; margin-right:0% padding-left:0%" onclick="$('html').animate({scrollTop : 0}, 100)">▲ Go Top</button>-->
+    <!--</div>-->
+
+      <!--<div class="" align="center">-->
+        <!--<a href="tel:0553426151">-->
+          <!--<img align="center" width="95%" height="" alt="nav_title_phone" src="{% static 'img/nav_title_phone.png' %}"><br><br>-->
+        <!--</a>-->
+      <!--</div>-->
+      <br><br>
+      <div class="" align="center">
+        <a href="tel:0553426151">
+          <font class="page-section-heading text-center text-uppercase font_1" color="#000000"   >055-342-6151</font>
+        </a>
+      </div>
+      <br>
+
+    </div>
+  </section>
+
+
+
+
+   <!-- Contact Section -->
+  <!--<section class="page-section bg-primary text-white mb-0" id="contact">-->
+    <!--<div class="container">-->
+
+      <!--<div class="divider-custom divider-light">-->
+        <!--<div class="divider-custom-line"></div>-->
+        <!--<div class="divider-custom-icon">-->
+          <!--<i class="fas fa-star"></i>-->
+        <!--</div>-->
+        <!--<div class="divider-custom-line"></div>-->
+      <!--</div>-->
+      <!--<div style = " font-size:7em;  color: white; text-align:center">010-1234-5678</div>-->
+    <!--</div>-->
+  <!--</section>-->
+
+
+  <!-- Footer -->
+  <hr>
+  <footer  style="padding:0px; padding-bottom:0px; padding:left:0px">
+    <div class="container" id="footer_contact" align="center">
+      <p style="font-size:0.47em; line-height:1px;">주소: 창원시 성산구 신월로 69  / 사업자정보: 390-35-00619 /  전화번호: 055-342-6151 </p>
+      <p style="font-size:0.47em; line-height:1px;">전화번호: 010-5477-6151 /  Fax: 055-603-0999 / 이메일: gostor28@naver.com</p>
+      <p style="font-size:0.47em; line-height:1px;">개인정보 관리책임자: 차남준  / Copyright &copy; 다이렉트 보일러&에어컨  /  대표: 차남준</p>
+      </div>
+  </footer>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+
+  window.onload = function () {
+    /*{% if popup %}
+      {% for i in popup %}
+        var url = "{{ i.photo.url }}";
+        var name = "popup";
+        var option = "width = 500, height = 500, top = 100, left = 200, location = no"
+        window.open(url, name, option);
+      {% endfor %}
+    {% endif %}
+    */
+
+    {% if check %}
+      var url = "{% url 'service_popup' %}";
+      var name = "popup";
+      var option = "width = 500, height = 500, top = 100, left = 200, location = no, menubar=yes"
+      window.open(url, name, option);
+    {% endif %}
+  }
+
+
+  $(document).ready(function(){
+<!--select box 꾸미기 설정-->
+                  var select = $('.select-script select');
+                  select.change(function(){
+                      var select_name = $(this).children('option:selected').text();
+                      $(this).siblings("label").text(select_name);
+                  });
+
+              });
+
+  function check_type(){
+    console.log("dsss")
+    if( document.myForm.product_type.value == "" ) {
+      console.log("a");
+      document.myForm.product_type.focus() ;
+      alert( "제품 종류를 선택해주세요!" );
+      return false;
+    }
+    else if (document.myForm.product_type.value == "boiler"){
+      console.log("boiler");
+      document.myForm.action = "{% url "service_boiler" %}";
+      return true;
+    }
+    else if (document.myForm.product_type.value == "onsugi"){
+      console.log("onsugi");
+      document.myForm.action = "{% url 'service_onsugi' %}";
+      return true;
+    }
+    else if (document.myForm.product_type.value == "aircon"){
+      console.log("aircon");
+      document.myForm.action = "{% url 'service_aircon' %}";
+      return true;
+    }
+  }
+
+  var currentPosition = parseInt($("#sidebox").css("top")); $(window).scroll(function() { var position = $(window).scrollTop(); $("#sidebox").stop().animate({"top":position+currentPosition+"px"},1000); });
+
+</script>
+
+
+</body>
+
+</html>
