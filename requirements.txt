@@ -10,7 +10,7 @@ gunicorn==19.9.0
 heroku.env==0.5.5
 heroku3==4.2.1
 idna==2.8
-pillow==7.0.0
+pillow==9.0.1
 psycopg2==2.8.3
 python-dateutil==2.8.1
 python-dotenv==0.11.0
